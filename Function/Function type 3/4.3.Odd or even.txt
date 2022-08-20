@@ -1,0 +1,16 @@
+#include <stdio.h>
+void OE(int);
+void main() 
+{
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    OE(num);
+}
+void OE(int num)
+{
+    if(num % 2 == 0)
+        printf("%d is even.", num);
+    else
+        printf("%d is odd.", num);
+}

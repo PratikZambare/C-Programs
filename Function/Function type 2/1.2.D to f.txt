@@ -1,0 +1,15 @@
+float DF();//
+void main() 
+{
+    float x;
+x= DF();
+printf("%f",x);
+}
+float DF()
+{
+     int c=0,f=0; 
+ printf("Enter °c :"); 
+ scanf("%d",&c); 
+ f=c*33.8; 
+  return f;
+}

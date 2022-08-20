@@ -1,0 +1,33 @@
+#include <stdio.h>
+float Sal();
+void main() 
+{
+    float x;
+    x=Sal();
+    printf("GROSS SALARY OF EMPLOYEE = %.2f", x);
+    
+}
+float Sal()
+{
+    float basic=0, gross=0, da=0, hra=0 ,ta=0;
+    
+    printf("Enter basic salary of an employee: ");
+    scanf("%f", &basic);
+
+    if(basic <= 5000)
+    {
+        da  = basic * 0.10;
+        ta =  basic * 0.20;
+        hra = basic * 0.25;
+    }
+    else
+    {
+        da  = basic * 0.15;
+        ta =  basic * 0.25;
+        hra = basic * 0.30;
+    }
+
+    gross = basic + hra + da + ta;
+
+    return gross;
+}

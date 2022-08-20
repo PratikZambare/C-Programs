@@ -1,0 +1,56 @@
+#include <stdio.h>
+int eo();
+int bs();
+void main() 
+{
+    int a,choice,e,b,ta,da,hra,sal;
+    printf("\n 1.even odd \n2.basic salary \nenter your choice :");
+    scanf("%d",&choice);
+    
+    if(choice==1)
+    {
+        printf("Enter a no : ");
+        scanf("%d",&a);
+        e=eo(a);
+        
+       if(e==10)
+       {
+            printf("Number is Even");
+       }
+       else if(e==20)
+       {
+           printf("Number is Odd");
+       }
+    }
+    else if (choice==2)
+    {
+        printf("Enter Your total salary : ");
+        scanf("%d",&sal);
+        printf("Enter Your total ta : ");
+        scanf("%d",&ta);
+        printf("Enter Your total da : ");
+        scanf("%d",&da);
+        printf("Enter Your total hra : ");
+        scanf("%d",&hra);
+        b=bs(ta,da,hra,sal);
+        printf("Your basic salary is : %d",b);
+    }
+    else
+    {
+        printf("Wrong choice");
+    }
+}
+int eo(int a) 
+{
+        if(a%2==0)
+        return 10;
+        else
+        return 20;
+}
+int bs(int ta,int da,int hra,int sal)
+{
+    int bsal;
+    
+    bsal=sal-ta-da-hra;
+    return bsal;
+}

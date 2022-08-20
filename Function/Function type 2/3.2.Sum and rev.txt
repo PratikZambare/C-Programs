@@ -1,0 +1,47 @@
+#include <stdio.h>
+int sum();
+void main() {
+   
+  int x,choice,y;
+  printf("1.sum\n2.rev\nenter your choice\n");
+  scanf("%d",&choice);
+  if(choice==1)
+  {
+  x=sum();
+   printf("sum is %d",x);
+  }
+  else if (choice==2)
+  {
+  y=rev();
+   printf("rev is %d",y);
+  }
+}
+int sum()
+{
+
+int n,sum=0,m; 
+ printf("Enter a number in continue manner:"); 
+ scanf("%d",&n); 
+ while(n>0) 
+ { 
+ m=n%10; 
+ sum=sum+m; 
+ n=n/10;
+        
+    }
+    return sum;
+    
+}
+int rev()
+{
+   int n,sum=0,rem,rev=0; 
+ printf("Enter 3 number in continue manner:"); 
+ scanf("%d",&n); 
+ while(n!=0) 
+ { 
+ rem = n % 10; 
+ rev= rev * 10 + rem; 
+ n=n/10;  
+ }
+ return rev;
+}

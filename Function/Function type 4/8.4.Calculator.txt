@@ -1,0 +1,65 @@
+#include <stdio.h>
+float add(float,float);
+float sub(float,float);
+float mul(float,float);
+float divide(float,float);
+void main() 
+{
+    char i;
+    float a,s,m,d,x,y;
+    printf("+ - Add\n- - sub\n* - mul\n/ - div\nEnter a operation to perform : ");
+    scanf("%c",&i);
+    printf("Enter 2 numbers : ");
+    scanf("%f""%f",&x,&y);
+    switch(i)
+    {
+        case '+':
+        {
+            a=add(x,y);
+            printf("Your addition of number is : %.2f",a);
+            break;
+        }
+        case '-':
+        {
+            s=sub(x,y);
+            printf("Your Substraction of number is : %.2f",s);
+            break;
+        }
+        case '*':
+        {
+            m=mul(x,y);
+            printf("Your Multiplication of number is : %.2f",m);
+            break;
+        }
+        case '/':
+        {
+            d=divide(x,y);
+            printf("Your Division of number is : %.2f",d);
+            break;
+        }
+    }
+}
+float add(float x,float y)
+{
+    int c;
+    c=x+y;
+    return c;
+}
+float sub(float x,float y)
+{
+    int c;
+    c=x-y;
+    return c;
+}
+float mul(float x,float y)
+{
+    int c;
+    c=x*y;
+    return c;
+}
+float divide(float x,float y)
+{
+    int c;
+    c=x/y;
+    return c;
+}

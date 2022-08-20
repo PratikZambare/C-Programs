@@ -1,0 +1,68 @@
+#include <stdio.h> 
+void R(int,int); 
+void C(float,float); 
+void main() 
+{ 
+    int choice,l,w,r;
+    float pie=3.142;
+    printf("\n1.Rectangle\n2.Circle\n"); 
+    printf("Enter Your choice :"); 
+    scanf("%d",&choice); 
+    if(choice==1) 
+ { 
+    printf("Enter length for rectangle :\n"); 
+    scanf("%d",&l); 
+    printf("Enter width for rectangle :\n"); 
+    scanf("%d",&w); 
+    R(l,w); 
+ } 
+ else if(choice==2) 
+ { 
+    printf("Enter the radius of the cicle :\n"); 
+    scanf("%f",&r); 
+    C(r,pie); 
+ } 
+ else 
+ { 
+    printf("Enter a valid choice"); 
+ } 
+} 
+void R(int l,int w) 
+{ 
+    int p1=0,p2=0,choice; 
+    printf("\n1.Area\n2.Perimeter\n"); 
+    printf("Enter for rectangle :"); 
+    scanf("%d",&choice); 
+    if(choice==1)
+    { 
+        p1=l*w; 
+        printf("Area for the rectangle is :%d",p1); 
+    } 
+    else 
+    { 
+        p2=(2*l)+(2*w); 
+        printf("Perimeter for the rectangle is :%d",p2); 
+    } 
+} 
+void C(float r,float pie) 
+{ 
+    int choice; 
+    float p=0; 
+    printf("\n1.Area\n2.Perimeter\n"); 
+    printf("Enter for Circle :"); 
+    scanf("%d",&choice); 
+    if(choice=1) 
+    { 
+        printf("Enter the radius of the cicle :\n"); 
+        scanf("%f",&r); 
+        p=(pie*r)*r; 
+        printf("Area for the circle is :%f",p); 
+    } 
+    else 
+    { 
+        printf("Enter the radius of the cicle :\n"); 
+        scanf("%f",&r); 
+        p=(2*pie)*r; 
+        printf("Perimeter for the circle is :%f",p); 
+    } 
+ }

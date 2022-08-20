@@ -1,0 +1,15 @@
+#include <stdio.h> 
+void df(int); 
+void main() 
+{ 
+    int c;
+    printf("Enter °C :"); 
+    scanf("%d",&c); 
+    df(c); 
+} 
+void df(int c ) 
+{ 
+    int f; 
+    f=c*33.8; 
+    printf("Degree to ferhenite : %d°F",f); 
+}

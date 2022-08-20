@@ -1,0 +1,44 @@
+#include <stdio.h>
+void Cal(float,float,char);
+void main() 
+{
+    float a=0,b=0;
+    char ch;
+  
+    printf("Enter choice to perform an operation : \n+ = Add\n- = Sub\n* = Mult\n/ = Div\nEnter your choice :");
+    scanf("%c",&ch);
+    printf("Enter 2 numbers : ");
+    scanf("%f""%f",&a,&b);
+   
+    Cal(a,b,ch);
+}
+void Cal(float a,float b,char ch)
+{
+   switch(ch)
+   {
+       case '+':
+       {
+           printf("%.2f + %.2f = %.2f", a, b, a + b);
+           break;
+       }
+       case '-':
+       {
+           printf("%.2f - %.2f = %.2f", a, b, a - b);
+           break;
+       }
+       case '*':
+       {
+           printf("%.2f * %.2f = %.2f", a, b, a * b);
+           break;
+       }
+       case '/':
+       {
+           printf("%.2f / %.2f = %.2f", a, b, a / b);
+           break;
+       }
+       default :
+       {
+           printf("Please enter a valid operator");
+       }
+   }
+}

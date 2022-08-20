@@ -1,0 +1,47 @@
+#include <stdio.h>
+void S();
+void R();
+void main() 
+{
+    int choice;
+    printf("1.Sum\n2.Reverse\n");
+    scanf("%d",&choice);
+    if(choice==1)
+    {
+        S();
+    }
+    else if(choice==2)
+    {
+        R();
+    }
+    else
+    {
+        printf("Enter a valid choice");
+    }
+}
+void S()
+{
+    int n,sum=0,m;    
+    printf("Enter a number in continue manner:");    
+    scanf("%d",&n);    
+    while(n>0)    
+    {    
+        m=n%10;    
+        sum=sum+m;    
+        n=n/10;    
+    }    
+    printf("Sum of number is=%d",sum);
+}
+void R()
+{
+    int n,sum=0,rem,rev=0;    
+    printf("Enter 3 number in continue manner:");    
+    scanf("%d",&n);
+    while(n!=0)    
+    { 
+    rem = n % 10;
+    rev= rev * 10 + rem;
+    n=n/10;
+    }    
+    printf("reverse of number is=%d",rev);    
+}

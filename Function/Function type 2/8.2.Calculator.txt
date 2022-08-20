@@ -1,0 +1,71 @@
+#include <stdio.h>
+int add();
+int sub();
+int mul();
+int divide();
+void main() 
+{
+    char i;
+    int a,s,m,d;
+    printf("+ - Add\n- - sub\n* - mul\n/ - div\nEnter a operation to perform : ");
+    scanf("%c",&i);
+    switch(i)
+    {
+        case '+':
+        {
+            a=add();
+            printf("Your addition of number is : %d",a);
+            break;
+        }
+        case '-':
+        {
+            s=sub();
+            printf("Your Substraction of number is : %d",s);
+            break;
+        }
+        case '*':
+        {
+            m=mul();
+            printf("Your Multiplication of number is : %d",m);
+            break;
+        }
+        case '/':
+        {
+            d=divide();
+            printf("Your Division of number is : %d",d);
+            break;
+        }
+    }
+}
+int add()
+{
+    int a,b,c;
+    printf("Enter 2 numbers : ");
+    scanf("%d""%d",&a,&b);
+    c=a+b;
+    return c;
+}
+int sub()
+{
+    int a,b,c;
+    printf("Enter 2 numbers : ");
+    scanf("%d""%d",&a,&b);
+    c=a-b;
+    return c;
+}
+int mul()
+{
+    int a,b,c;
+    printf("Enter 2 numbers : ");
+    scanf("%d""%d",&a,&b);
+    c=a*b;
+    return c;
+}
+int divide()
+{
+    int a,b,c;
+    printf("Enter 2 numbers : ");
+    scanf("%d""%d",&a,&b);
+    c=a/b;
+    return c;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+float df(int); 
+void main() 
+{ 
+ int c,a; 
+ printf("Enter °C :"); 
+ scanf("%d",&c); 
+ a=df(c);
+  printf("Degree to ferhenite : %d°F",a); 
+} 
+float df(int c) 
+{ 
+float f; 
+ f=c*33.8; 
+ return f;
+}

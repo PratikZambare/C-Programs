@@ -1,0 +1,56 @@
+#include <stdio.h>
+void Stud(float);
+void Nor(float);
+void main() 
+{
+    int ch=0;
+    float price=0;
+    printf("You are student or not\n1.Yes\n2.No\nEnter your choice :");
+    scanf("%d",&ch);
+    if(ch==1)
+    {
+        printf("Enter the price : ");
+        scanf("%f",&price);
+        Stud(price);
+    }
+    else if (ch==2)
+    {
+        printf("Enter the price : ");
+        scanf("%f",&price);
+        Nor(price);
+    }
+    else
+    {
+        printf("Wrong choice");
+    }
+}
+void Stud(float price) 
+{       
+        float dis=0,fprice=0;
+        if(price>=1000)
+        {
+            dis=(price*25)/100;
+            fprice=price-dis;
+            printf("Your final price is : %f",fprice);
+        }else
+        {
+            dis=(price*20)/100;
+            fprice=price-dis;
+            printf("Your final price is : %f",fprice);
+        }
+}
+void Nor(float price)
+{
+    float dis=0,fprice=0;
+    if(price>=1000)
+    {
+        dis=(price*15)/100;
+        fprice=price-dis;
+        printf("Your final price is : %f",fprice);
+    }else
+    {
+        dis=(price*10)/100;
+        fprice=price-dis;
+        printf("Your final price is : %f",fprice);
+    }
+}

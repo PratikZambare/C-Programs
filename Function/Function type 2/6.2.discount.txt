@@ -1,0 +1,45 @@
+#include <stdio.h>
+int dis();
+void main() 
+{
+    int a;
+    a=dis();
+    if(a>=300)
+    {
+        printf("Your discounted price is : %d",a);
+    }
+    else
+    {
+        printf("Enter the amount above 299/ to avail discount. ");
+    }
+}
+int dis()
+{
+    {
+    int dis,price;
+    printf("Enter Your Amount : ");
+    scanf("%d",&price);
+    if(price>=300)
+    {
+        dis=(price*10)/100;
+        price=price-dis;
+        return price;
+    }
+    else if(price>=600)
+    {
+        dis=(price*15)/100;
+        price=price-dis;
+        return price;
+    }
+    else if(price>=1000)
+    {
+        dis=(price*20)/100;
+        price=price-dis;
+        return price;
+    }
+    else
+    {
+        return 0;
+    }
+}
+}

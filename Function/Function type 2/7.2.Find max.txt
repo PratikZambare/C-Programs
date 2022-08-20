@@ -1,0 +1,25 @@
+#include <stdio.h>
+int max();
+void main() 
+{
+    int m;
+    m=max();
+    printf("Maximum number is %d",m);
+}
+int max()
+{
+    int a,b,c;
+    printf("Enter the number : ");
+    scanf("%d""%d""%d",&a,&b,&c);
+    if(a>b&&a>c)
+    {
+        return a;
+    }
+    else if(b>c)
+    {
+        return b;
+    }else
+    {
+        return c;
+    }
+}
