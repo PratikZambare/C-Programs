@@ -1,0 +1,35 @@
+#include <stdio.h>
+typedef struct time
+{
+    int hr;
+    int min;
+    int sec;
+}t;
+int main() 
+{  
+    t p1;
+    int min=0,sec=0;
+    printf("\t\t: Enter the Time : ");
+    printf("\nEnter the Hr : ");
+    scanf("%d",&p1.hr);
+    printf("Enter the Min : ");
+    scanf("%d",&p1.min);
+    printf("Enter the Sec : ");
+    scanf("%d",&p1.sec);
+    printf("Time you entered is : %d Hr %d Min %d Sec",p1.hr,p1.min,p1.sec);
+    if(p1.sec>=60)
+    {
+        sec=p1.sec/60;
+        p1.min=p1.min+sec;
+    }p1.sec=p1.sec-(sec*60);
+    if(p1.min>=60)
+    {
+        min=p1.min/60;
+        p1.hr=p1.hr+min;
+    }
+    p1.min=p1.min-(min*60);
+    printf("\nTime actual is you entered is : %d Hr %d Min %d Sec",p1.hr,p1.min,p1.sec);
+    
+    p1.sec=(((p1.hr*60)*60)+(p1.min*60)+60);
+    printf("\nTotal time in second is : %d",p1.sec);
+}

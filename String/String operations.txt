@@ -1,0 +1,137 @@
+#include <stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int length(char* strp)
+{
+   int l;
+   l=strlen(strp);
+  return l;
+}
+int compare(char* strp,char* strrp)
+{
+    int c;
+    c=strcmp(strp,strrp);
+    return c;
+}
+void copy(char* strp,char* strrp)
+{
+    strcpy(strrp,strp);
+}
+int joint(char* strp,char* strrp)
+{
+    strcat(strp,strrp);
+}
+void reverse(char* strp)
+{
+    int temp,i,len;
+    len=strlen(strp);
+    for(i=0;i<len/2;i++)
+    {
+        temp=strp[i];
+        strp[i]=strp[len-i-1];
+        strp[len-i-1]=temp;
+    }
+}
+void upper(char* strp)
+{
+    for(int i=0;strp[i]!='\0';i++)
+            {
+                if(strp[i]>='a'&&strp[i]<='z')
+                {
+                    strp[i]=strp[i]-32;
+                }
+            }
+}
+void lower(char* strp)
+{
+    for(int i=0;strp[i]!='\0';i++)
+            {
+                if(strp[i]>='A'&&strp[i]<='Z')
+                {
+                    strp[i]=strp[i]+32;
+                }
+            }
+}
+int main()
+{
+    int s,l,c,i;
+    char str[50],strr[50];
+    char* strp=str;
+    char* strrp=strr;
+    printf("1.Length Of The String : \n");
+    printf("2.Compare Two Strings : \n");
+    printf("3.Copy One String Into Another : \n");
+    printf("4.Join Two Strings Into One : \n");
+    printf("5.Reverse The Given String : \n");
+    printf("6.Convert Lower Case Or Uppper Case : \n");
+    printf("Enter the choice you want perform : ");
+    scanf("%d",&s);
+    switch(s)
+    {
+        case 1:
+        printf("Enter the string to calculate length : ");
+        scanf("%s",strp);
+        l=length(str);
+        printf("The length of entered string is : %d",l);
+        break;
+        
+        case 2:
+        printf("Enter First string to compare : ");
+        scanf("%s",strp);
+        printf("Enter Second string to compare : ");
+        scanf("%s",strrp);
+        c=compare(str,strr);
+        if(c==0)
+        {
+            printf("Both string are the same.");
+        }
+        else
+        {
+            printf("String are not same. ");
+        }
+        break;
+        
+        case 3:
+        printf("Enter the string to copy into another string : ");
+        scanf("%s",strp);
+        copy(str,strr);
+        printf("Copied into another string is : %s",strr);
+        break;
+        
+        case 4:
+        printf("Enter First string to Join : ");
+        scanf("%s",strp);
+        printf("Enter Second string to Join : ");
+        scanf("%s",strrp);
+        joint(str,strr);
+        printf("Your Joined string is : %s",strp);
+        break;
+        
+        case 5:
+        printf("Enter the string to Reverse : ");
+        scanf("%s",strp);
+        reverse(str);
+        printf("Your reversed string is : %s",strp);
+        break;
+        
+        case 6:
+        printf("Enter the string : ");
+        scanf("%s",&str);
+        printf("1.Uppercase : \n");
+        printf("2.Lowercase : \n");
+        printf("Enter your choice : ");
+        scanf("%d",&c);
+        switch(c)
+        {
+            case 1:
+            upper(str);
+            printf("\nString in Upper Case = %s", str);
+            break;
+            
+            case 2:
+            lower(str);
+            printf("\nString in Lower Case = %s", str);
+            break;
+        }
+    }
+}

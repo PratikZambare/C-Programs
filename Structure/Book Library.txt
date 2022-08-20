@@ -1,0 +1,168 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct Book
+{
+    int id;
+    char bname[50];
+    char author[20];
+}b[50];
+
+void main()
+{
+    int op,i,found=0,bi;
+    char bn[50],an[50],ch;
+    strcpy(b[0].bname, "Clean Code");
+    strcpy(b[0].author, "Robert Martin");
+    b[0].id = 1;
+    strcpy(b[1].bname, "The Pragmetic Programmer");
+    strcpy(b[1].author, "Andrew Hunt");
+    b[1].id = 2;
+    strcpy(b[2].bname, "Code Complete");
+    strcpy(b[2].author, "Steve McConnell");
+    b[2].id = 3;
+    strcpy(b[3].bname, "The art of computer programming");
+    strcpy(b[3].author, "Donald Knuth");
+    b[3].id = 4;
+    strcpy(b[4].bname, "Programming Perls");
+    strcpy(b[4].author, "Jon Bentley");
+    b[4].id = 5;
+    strcpy(b[5].bname, "Code:");
+    strcpy(b[5].author, "Charles Petzold");
+    b[5].id = 6;
+    strcpy(b[6].bname, "Rich dad poor dad");
+    strcpy(b[6].author, "Robert Kiyosaki");
+    b[6].id = 7;
+    strcpy(b[7].bname, "Think and grow rich");
+    strcpy(b[7].author, "Napoleon Hill");
+    b[7].id = 8;
+    strcpy(b[8].bname, "20 millionaires under 30");
+    strcpy(b[8].author, "Sophia Graham");
+    b[8].id = 9;
+    strcpy(b[9].bname, "Do epic shit");
+    strcpy(b[9].author, "Ankur Warikoo");
+    b[9].id = 10;
+    strcpy(b[10].bname, "The law of success");
+    strcpy(b[10].author, "Napoleon Hill");
+    b[10].id = 11;
+    strcpy(b[11].bname, "Prince in excibe");
+    strcpy(b[11].author, "Jackie Chan");
+    b[11].id = 12;
+    strcpy(b[12].bname, "Mabayabam poetry");
+    strcpy(b[12].author, "Akkitham Achuthan Namboodri");
+    b[12].id = 13;
+    strcpy(b[13].bname, "The Testaments");
+    strcpy(b[13].author, "Margaret Atwood");
+    b[13].id = 14;
+    strcpy(b[14].bname, "Cheque book");
+    strcpy(b[14].author, "Vasdev Mohi");
+    b[14].id = 15;
+    strcpy(b[15].bname, "The Overstory");
+    strcpy(b[15].author, "Richard Powers");
+    b[15].id = 16;
+    strcpy(b[16].bname, "Mind-Master");
+    strcpy(b[16].author, "Viswanathan Anand and Susan Ninan");
+    b[16].id = 17;
+    strcpy(b[17].bname, "Bridgitab Nation");
+    strcpy(b[17].author, "Shri N Chandrasekaran");
+    b[17].id = 18;
+    strcpy(b[18].bname, "Vivekadeepini");
+    strcpy(b[18].author, "Adi Shankaracharya");
+    b[18].id = 19;
+    strcpy(b[19].bname, "My Journey");
+    strcpy(b[19].author, "Dr. A.P.J. Abdub Kabam");
+    b[19].id = 20;
+    strcpy(b[20].bname, "Making of New India");
+    strcpy(b[20].author, "Dr. Bibek Debroy");
+    do{
+       printf("\n\n1.Search by Book Name\n2.Search by Author Name\n3.Search by Book Id\n4.Display books available in Library\n5.Exit\n\nEnter your option:  ");
+       scanf("%d",&op);
+       switch(op)
+       {
+           case 1:
+                printf("Enter the book name to search : ");
+                scanf("\n");
+                scanf ("%[^\n]%*c", bn);   
+                printf("\n");
+                for(i=0;i<20;i++)
+                {
+                    if(strcmp(bn,b[i].bname)==0)
+                    {
+                        found=1;
+                        printf("<--- Author Found --->\n");
+                        printf("\nBook Id : %d",b[i].id);
+                        printf("\nBook Name : %s",b[i].bname);
+                        printf("\nAuthor Name : %s ",b[i].author);
+                    }
+                
+                }
+                if(found==0)
+                    {
+                        printf("Wrong author name entered : ");
+                    }
+                printf("\nDo you wanna search again y/n : \n");
+                scanf("%c",&ch);break;
+            
+            case 2:
+                printf("Enter the Author name to search : ");
+                scanf("\n");
+                scanf ("%[^\n]%*c", an);   
+                printf("\n");
+                for(i=0;i<20;i++)
+                {
+                    if(strcmp(an,b[i].author)==0)
+                    {
+                        found=1;
+                        printf("<--- Author Found --->\n");
+                        printf("\nBook Id : %d",b[i].id);
+                        printf("\nBook Name : %s",b[i].bname);
+                        printf("\nAuthor Name : %s ",b[i].author);
+                    }
+                
+                }
+                if(found==0)
+                    {
+                        printf("Wrong author name entered : ");
+                    }
+                printf("\nDo you wanna search again y/n :");
+                scanf("%c",&ch);
+            break;
+            
+            case 3:
+                printf("Enter book id to search : ");
+                scanf("%d",&bi);
+                for(i=0;i<20;i++)
+                {
+                    if(bi==b[i].id)
+                    {
+                        found=1;
+                        printf("<--- Author Found --->\n");
+                        printf("\nBook Id : %d",b[i].id);
+                        printf("\nBook Name : %s",b[i].bname);
+                        printf("\nAuthor Name : %s ",b[i].author);
+                        break;
+                    }
+                }
+                if(found==0)
+                    {
+                        printf("Book Not Found of this id: ");
+                    }break;
+            case 4:
+                printf("All Books availble in Library : \n");
+                for(i=0;i<20;i++)
+                {
+                    printf("Book Id : %d / ",b[i].id);
+                    printf("Book Name : %s / ",b[i].bname);
+                    printf("Author Name: %s\n ",b[i].author);
+                }break;
+            
+            case 5:
+                printf("<--- Thank You --->");
+                exit(0);
+            
+            default:
+                printf("Invalid Option ! ,Enter a valid option from 1 to 5");
+                return main();
+       }
+    }while(ch=='y'||ch=='Y');
+}
