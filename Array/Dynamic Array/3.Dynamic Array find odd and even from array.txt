@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include<stdlib.h>
+void main()
+{
+    int* a=(int*)malloc(sizeof(int));
+    int i,sum=0,n;
+    printf("Enter the number in the dynamic array : ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        printf("Enter the %d element in the array : ",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("Even numbers in the array is : ");
+    for(i=0; i<n; i++)
+    {
+        if(a[i]%2==0)
+        {
+            printf("%d ",a[i]);
+        }
+    }
+    printf("\nOdd numbers in the array is : ");
+    for(i=0; i<n; i++)
+    {
+    if(a[i]%2!=0)
+        {
+            printf("%d ",a[i]);
+        }
+    }
+}
