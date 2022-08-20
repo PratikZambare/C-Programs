@@ -1,0 +1,17 @@
+#include <stdio.h>
+int myfun(int);
+int main() {
+  int n,r;
+  printf("Enter an integer: ");
+  scanf("%d", &n);
+  r=myfun(n);
+  if(n==r){printf("%d Number is Palindrome. ",r);}
+  else{printf("%d Number is not Palindrome. ",r);}
+}myfun(int n){
+    int rev = 0, rem=0;
+    while (n != 0) {
+    rem = n % 10;
+    rev= rev * 10 + rem;
+    n /= 10;}
+    return rev;
+}

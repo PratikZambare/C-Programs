@@ -1,0 +1,80 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct player
+{
+    char pname[50];
+    int mp;
+    int runs;
+    int wicket;
+}b[10],p[2];
+void Accept()
+{
+    int i;
+    for(i=0;i<10;i++)
+    {
+        printf("\nEnter the name of the %d player : ",i+1);
+        scanf("\n");
+        scanf("%[^\n]%*c",b[i].pname);
+        printf("\n");
+        printf("Enter the No of matches played of the %d player : ",i+1);
+        scanf("%d",&b[i].mp);
+        printf("\nEnter the Runs of the %d player : ",i+1);
+        scanf("%d",&b[i].runs);
+        printf("\nEnter the wickets of the %d player : ",i+1);
+        scanf("%d",&b[i].wicket);
+        
+    }
+}
+void display()
+{
+    int i;
+    for(i=0;i<10;i++)
+    {
+        printf("\n<--- Data for the %d player --->\n",i+1);
+        printf("\nName of the player : %s",b[i].pname);
+        printf("\nNo of matches played of the player : %d ",b[i].mp);
+        printf("\nRuns of the player : %d",b[i].runs);
+        printf("\nWickets of the player : %d",b[i].wicket);
+    }
+}
+void main()
+{
+    int i;
+    printf("<--- Enter the Data for 10 players ---> ");
+    Accept();
+    display();
+    for(i=0;i<10;i++)
+    {
+        // p[0]=0;
+        if(p[0].runs<b[i].runs)
+        {
+            strcpy(p[0].pname,b[i].pname);
+            p[0].mp=b[i].mp;
+            p[0].wicket=b[i].wicket;
+            p[0].runs=b[i].runs;
+        }
+    }
+        printf("\n\n<--- Data of maximum runs player --->");
+        printf("\nName of the player : %s",p[0].pname);
+        printf("\nNo of matches played of the player : %d ",p[0].mp);
+        printf("\nRuns of the player : %d",p[0].runs);
+        printf("\nWickets of the player : %d",p[0].wicket);
+        
+        for(i=0;i<10;i++)
+    {
+        // p[0]=0;
+        if(p[1].wicket<b[i].wicket)
+        {
+            strcpy(p[1].pname,b[i].pname);
+            p[1].mp=b[i].mp;
+            p[1].wicket=b[i].wicket;
+            p[1].runs=b[i].runs;
+        }
+    }
+        printf("\n\n<--- Data of maximum wickets player --->");
+        printf("\nName of the player : %s",p[1].pname);
+        printf("\nNo of matches played of the player : %d ",p[1].mp);
+        printf("\nRuns of the player : %d",p[1].runs);
+        printf("\nWickets of the player : %d",p[1].wicket);
+}

@@ -1,0 +1,154 @@
+<--- Enter the Data for 10 players --->
+Enter the name of the 1 player : rohit sharma
+
+Enter the No of matches played of the 1 player : 3
+
+Enter the Runs of the 1 player : 159
+
+Enter the wickets of the 1 player : 2
+
+Enter the name of the 2 player : yuvraj singh
+
+Enter the No of matches played of the 2 player : 2
+
+Enter the Runs of the 2 player : 70
+
+Enter the wickets of the 2 player : 4
+
+Enter the name of the 3 player : sachin tendulkar
+
+Enter the No of matches played of the 3 player : 10
+
+Enter the Runs of the 3 player : 460
+
+Enter the wickets of the 3 player : 5
+
+Enter the name of the 4 player : mahendra sign dhoni
+
+Enter the No of matches played of the 4 player : 7
+
+Enter the Runs of the 4 player : 50
+
+Enter the wickets of the 4 player : 1
+
+Enter the name of the 5 player : rahul dravid
+
+Enter the No of matches played of the 5 player : 6
+
+Enter the Runs of the 5 player : 36
+
+Enter the wickets of the 5 player : 3
+
+Enter the name of the 6 player : william smith
+
+Enter the No of matches played of the 6 player : 8
+
+Enter the Runs of the 6 player : 17
+
+Enter the wickets of the 6 player : 6
+
+Enter the name of the 7 player : john cena
+
+Enter the No of matches played of the 7 player : 9
+
+Enter the Runs of the 7 player : 90
+
+Enter the wickets of the 7 player : 7
+
+Enter the name of the 8 player : bruce banner
+
+Enter the No of matches played of the 8 player : 14
+
+Enter the Runs of the 8 player : 91
+
+Enter the wickets of the 8 player : 8
+
+Enter the name of the 9 player : tony stark
+
+Enter the No of matches played of the 9 player : 15
+
+Enter the Runs of the 9 player : 92
+
+Enter the wickets of the 9 player : 9
+
+Enter the name of the 10 player : nick jonas
+
+Enter the No of matches played of the 10 player : 16
+
+Enter the Runs of the 10 player : 341
+
+Enter the wickets of the 10 player : 10
+
+<--- Data for the 1 player --->
+
+Name of the player : rohit sharma
+No of matches played of the player : 3
+Runs of the player : 159
+Wickets of the player : 2
+<--- Data for the 2 player --->
+
+Name of the player : yuvraj singh
+No of matches played of the player : 2
+Runs of the player : 70
+Wickets of the player : 4
+<--- Data for the 3 player --->
+
+Name of the player : sachin tendulkar
+No of matches played of the player : 10
+Runs of the player : 460
+Wickets of the player : 5
+<--- Data for the 4 player --->
+
+Name of the player : mahendra sign dhoni
+No of matches played of the player : 7
+Runs of the player : 50
+Wickets of the player : 1
+<--- Data for the 5 player --->
+
+Name of the player : rahul dravid
+No of matches played of the player : 6
+Runs of the player : 36
+Wickets of the player : 3
+<--- Data for the 6 player --->
+
+Name of the player : william smith
+No of matches played of the player : 8
+Runs of the player : 17
+Wickets of the player : 6
+<--- Data for the 7 player --->
+
+Name of the player : john cena
+No of matches played of the player : 9
+Runs of the player : 90
+Wickets of the player : 7
+<--- Data for the 8 player --->
+
+Name of the player : bruce banner
+No of matches played of the player : 14
+Runs of the player : 91
+Wickets of the player : 8
+<--- Data for the 9 player --->
+
+Name of the player : tony stark
+No of matches played of the player : 15
+Runs of the player : 92
+Wickets of the player : 9
+<--- Data for the 10 player --->
+
+Name of the player : nick jonas
+No of matches played of the player : 16
+Runs of the player : 341
+Wickets of the player : 10
+
+<--- Data of maximum runs player --->
+Name of the player : sachin tendulkar
+No of matches played of the player : 10
+Runs of the player : 460
+Wickets of the player : 5
+
+<--- Data of maximum wickets player --->
+Name of the player : nick jonas
+No of matches played of the player : 16
+Runs of the player : 341
+Wickets of the player : 10
+PS C:\Users\Pratik>

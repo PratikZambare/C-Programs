@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main() {
+    int a,b,choice;
+    int bsal,ta,da,hra,sal;
+    printf("\n 1.even odd \n2.basic salary \nenter your choice :");
+    scanf("%d",&choice);
+    
+    if(choice==1)
+    {
+        printf("enter a no\n");
+        scanf("%d",&a);
+        if(a%2==0)
+        printf("even");
+        else
+        printf("odd");
+    }
+    else if (choice==2)
+    {
+        printf("Enter Your total salary : ");
+        scanf("%d",&sal);
+        printf("Enter Your total ta : ");
+        scanf("%d",&ta);
+        printf("Enter Your total da : ");
+        scanf("%d",&da);
+        printf("Enter Your total hra : ");
+        scanf("%d",&hra);
+        bsal=sal-ta-da-hra;
+        printf("Your basic salary is : %d",bsal);
+    }
+}

@@ -1,0 +1,104 @@
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+class Vehicle
+{
+    int gear;
+    int seat;
+    char vname[20];
+    double price;
+    
+    public:
+    Vehicle()
+    {
+        this->gear=0;
+        this->seat=0;
+        strcpy(vname,"Not Mentioned");
+        this->price=0;
+    }
+    Vehicle(int gear,int seat,const char* vname,double price)
+    {
+        this->gear=gear;
+        this->seat=seat;
+        strcpy(this->vname,vname);
+        this->price=price;
+    }
+    virtual void display()
+    {
+        cout<<"\n Name of Vehicle : "<<this->vname;
+        cout<<"\n Seat of vehicle : "<<this->seat;
+        cout<<"\n Gears of Vehicle : "<<this->gear;
+        cout<<"\n Price of Vehicle : "<<this->price;
+    }
+};//class vehicle ends here : 
+class Bike : public Vehicle
+{
+	int now;
+	
+	public : 
+	
+	Bike(): Vehicle()
+	{
+		this->now=0;
+	}
+	Bike(int gear,int seat,const char* vname,double price,int now): Vehicle(gear,seat,vname,price)
+	{
+		this->now=now;
+	}
+	void display()
+	{
+		Vehicle::display();
+		cout<<"\n No of wheels : "<<this->now;
+	}
+};//class Bike ends here : 
+class Car : public Vehicle
+{
+	int noab;
+	int noac;
+	int seatbelt;
+	
+	public :
+		Car():Vehicle()
+		{
+			this->noab=0;
+			this->noac=0;
+			this->seatbelt=0;
+		}
+		Car(int gear,int seat,const char* vname,double price,int noab,int noac,int seatbelt)
+		:Vehicle(gear,seat,vname,price)
+		{
+			this->noab=noab;
+			this->noac=noac;
+			this->seatbelt=seatbelt;
+		}
+		void display()
+		{
+			Vehicle :: display();
+			cout<<"\n No of Air-Bags : "<<this->noab;
+			cout<<"\n No of AC : "<<this->noac;
+			cout<<"\n No of SeatBelt : "<<this->seatbelt;
+		}
+};//Class Car ends here : 
+int main()
+{
+	cout<<"Vehicle : \n";
+	Vehicle* vp;
+	Vehicle v1;
+	vp=&v1;
+	vp->display();
+	cout<<"\n";
+	Vehicle v2(2,2,"No",0.00);
+	vp=&v2;
+	vp->display();
+	
+	cout<<"\n\nBike : \n";
+	Bike b1(2,2,"Pulsar",125000,2);
+	vp=&b1;
+	vp->display();
+	
+	cout<<"\n\nCar : \n";
+	Car c1(7,5,"BMW",15225000,6,4,5);
+	vp=&c1;
+	vp->display();
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+int myfun(int*,int*);
+int main() 
+{
+    int* a,b;
+    printf("Enter 1st number :");
+    scanf("%d",&a);
+    printf("Enter 2nd number :");
+    scanf("%d",&b);
+    printf("Before Swap : %d-%d",a,b);
+    myfun(&a,&b);
+    printf("\nafter Swap : %d-%d",a,b);
+}
+int myfun(int* a,int* b)
+{
+    int c;
+    c=*a;
+    *a=*b;
+    *b=c;
+}

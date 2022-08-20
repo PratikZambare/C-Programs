@@ -1,0 +1,17 @@
+#include<stdio.h>  
+int main()    
+{    
+    int n,sum=0,m;    
+    printf("Enter a number in continue manner:");    
+    scanf("%d",&n);    
+    while(n>0)    
+    {    
+        m=n%10;    
+        printf("%d\n",m);
+        sum=sum+m;    
+        printf("%d\n",sum);
+        n=n/10;
+        printf("%d",n);
+    }    
+    printf("Sum of number is=%d",sum);    
+}   
